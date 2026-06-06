@@ -7,12 +7,15 @@ const GEOSERVER = {
 const GS_LAYERS = {
   no2Amac:    'Portugal_no2_2021_2023_AMAC_map',
   no2Avg:     'Portugal_average_no2_2023',
+  no2Avg21:   'Portugal_average_no2_2021',
   no2Conc:    'Portugal_no2_concentration_map_2023',
   pm25Amac:   'Portugal_pm2p5_2021_2023_AMAC_map',
   pm25Avg:    'Portugal_average_pm2p5_2023',
+  pm25Avg21:  'Portugal_average_pm2p5_2021',
   pm25Conc:   'Portugal_pm2p5_concentration_map_2023',
   pm10Amac:   'Portugal_pm10_2021_2023_AMAC_map',
   pm10Avg:    'Portugal_average_pm10_2023',
+  pm10Avg21:  'Portugal_average_pm10_2021',
   pm10Conc:   'Portugal_pm10_concentration_map_2023',
   boundary:   'Portugal_bound'
 };

@@ -15,13 +15,16 @@ function wms(title, layer, visible, opacity){
 // All 10 layers
 const layers = {
   no2Amac:   wms('NO₂ AMAC', GS_LAYERS.no2Amac, true),
-  no2Avg:    wms('NO₂ Annual Avg', GS_LAYERS.no2Avg, false, 0.7),
+  no2Avg:    wms('NO₂ Annual Avg 2023', GS_LAYERS.no2Avg, false, 0.7),
+  no2Avg21:  wms('NO₂ Annual Avg 2021', GS_LAYERS.no2Avg21, false, 0.7),
   no2Conc:   wms('NO₂ Concentration', GS_LAYERS.no2Conc, false, 0.7),
   pm25Amac:  wms('PM₂.₅ AMAC', GS_LAYERS.pm25Amac, true),
-  pm25Avg:   wms('PM₂.₅ Annual Avg', GS_LAYERS.pm25Avg, false, 0.7),
+  pm25Avg:   wms('PM₂.₅ Annual Avg 2023', GS_LAYERS.pm25Avg, false, 0.7),
+  pm25Avg21: wms('PM₂.₅ Annual Avg 2021', GS_LAYERS.pm25Avg21, false, 0.7),
   pm25Conc:  wms('PM₂.₅ Concentration', GS_LAYERS.pm25Conc, false, 0.7),
   pm10Amac:  wms('PM₁₀ AMAC', GS_LAYERS.pm10Amac, false),
-  pm10Avg:   wms('PM₁₀ Annual Avg', GS_LAYERS.pm10Avg, false, 0.7),
+  pm10Avg:   wms('PM₁₀ Annual Avg 2023', GS_LAYERS.pm10Avg, false, 0.7),
+  pm10Avg21: wms('PM₁₀ Annual Avg 2021', GS_LAYERS.pm10Avg21, false, 0.7),
   pm10Conc:  wms('PM₁₀ Concentration', GS_LAYERS.pm10Conc, false, 0.7),
   boundary:  wms('Portugal Boundary', GS_LAYERS.boundary, true, 1),
 };
@@ -47,13 +50,16 @@ document.querySelectorAll('input[data-layer]').forEach(cb=>{cb.addEventListener(
 // Legend
 const legendLayers = [
   ['no2Amac','NO₂ AMAC',GS_LAYERS.no2Amac],
-  ['no2Avg','NO₂ Annual Avg',GS_LAYERS.no2Avg],
+  ['no2Avg','NO₂ Annual Avg 2023',GS_LAYERS.no2Avg],
+  ['no2Avg21','NO₂ Annual Avg 2021',GS_LAYERS.no2Avg21],
   ['no2Conc','NO₂ Concentration',GS_LAYERS.no2Conc],
   ['pm25Amac','PM₂.₅ AMAC',GS_LAYERS.pm25Amac],
-  ['pm25Avg','PM₂.₅ Annual Avg',GS_LAYERS.pm25Avg],
+  ['pm25Avg','PM₂.₅ Annual Avg 2023',GS_LAYERS.pm25Avg],
+  ['pm25Avg21','PM₂.₅ Annual Avg 2021',GS_LAYERS.pm25Avg21],
   ['pm25Conc','PM₂.₅ Concentration',GS_LAYERS.pm25Conc],
   ['pm10Amac','PM₁₀ AMAC',GS_LAYERS.pm10Amac],
-  ['pm10Avg','PM₁₀ Annual Avg',GS_LAYERS.pm10Avg],
+  ['pm10Avg','PM₁₀ Annual Avg 2023',GS_LAYERS.pm10Avg],
+  ['pm10Avg21','PM₁₀ Annual Avg 2021',GS_LAYERS.pm10Avg21],
   ['pm10Conc','PM₁₀ Concentration',GS_LAYERS.pm10Conc],
 ];
 
