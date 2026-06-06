@@ -1,16 +1,22 @@
 <!DOCTYPE html>
 <html lang="en">
-<head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><title>Results · Portugal AQ</title><link rel="stylesheet" href="css/style.css"></head>
+<head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><title>Results · Portugal AQ</title><link rel="stylesheet" href="css/style.css">
+<style>.result-row{display:flex;gap:2rem;align-items:flex-start;margin-bottom:2rem}.result-row img{width:45%;border-radius:12px;cursor:zoom-in}.result-row p{flex:1;color:var(--text-dim);font-size:.88rem;line-height:1.7}</style></head>
 <body>
 <nav class="navbar"><div class="nav-inner"><div class="nav-logo"><span class="logo-dot"></span>Portugal Air Quality WebGIS</div><ul class="nav-links"><li><a href="index.html">Home</a></li><li><a href="methods.html">Methods</a></li><li><a href="results.html" class="active">Results</a></li><li><a href="webgis.html">WebGIS</a></li></ul></div></nav>
 
-<section class="section" style="padding-bottom:2rem"><div class="container"><div class="section-header fade-up"><h2>Results &amp; Analysis</h2><p class="subtitle">Land cover change, AMAC correlation, and population exposure assessment</p></div></div></section>
+<!-- 1. Results Overview -->
+<section class="section" style="padding-bottom:2rem"><div class="container"><div class="section-header fade-up"><h2>1. Results Overview</h2><p class="subtitle">This section presents the main outputs of the Portugal air quality analysis, including pollutant changes between 2021 and 2023, 2023 concentration classification maps, land cover change statistics, zonal statistics, bivariate exposure analysis, and population exposure charts. Together, these results show how NO₂, PM₂.₅, and PM₁₀ concentrations vary across the country and how these patterns relate to land cover transitions and population distribution.</p></div></div></section>
 
-<!-- LC Tables -->
+<!-- 2. Air Quality Change -->
+<section class="section" style="padding-top:0;padding-bottom:2rem"><div class="container"><div class="section-header fade-up"><h2>2. Air Quality Change 2021–2023</h2><p class="subtitle">This section presents the 2021–2023 annual mean concentration changes for NO₂, PM₂.₅, and PM₁₀, highlighting where pollutant levels increased or decreased across Portugal. The AMAC maps are available as interactive WMS layers in the <a href="webgis.html" style="color:var(--sage);font-weight:600">WebGIS</a>.</p></div></div></section>
+
+<!-- 3. Concentration Classification -->
+<section class="section" style="padding-top:0;padding-bottom:2rem"><div class="container"><div class="section-header fade-up"><h2>3. 2023 Concentration Classification</h2><p class="subtitle">This section shows the 2023 annual pollutant concentration maps reclassified into EU air quality levels, allowing a comparison of NO₂, PM₂.₅, and PM₁₀ exposure patterns across the study area. The classified maps are published as WMS layers and can be explored in the <a href="webgis.html" style="color:var(--sage);font-weight:600">WebGIS</a>.</p></div></div></section>
+
+<!-- 4. Land Cover Change -->
 <section class="section" style="padding-top:0;padding-bottom:3rem"><div class="container">
-  <div class="section-header fade-up"><h2>Land Cover Change 2021–2023</h2><p class="subtitle">Persistence, gain sources, and loss destinations · Area % from EPSG:3035</p></div>
-
-  <!-- Trees -->
+  <div class="section-header fade-up"><h2>4. Land Cover Change Statistics</h2><p class="subtitle">This section summarizes the main land cover transitions between 2021 and 2023, highlighting the stability, gains, and losses of key classes such as Trees, Built Area, and Crops, based on both area-based and pixel-based percentages.</p></div>
   <div class="fade-up delay-1" style="margin-bottom:2rem">
     <h3 style="font-weight:700;color:var(--sage-dark);margin-bottom:.75rem">Trees</h3>
     <div class="table-wrapper"><table class="data-table"><thead><tr><th>Indicator</th><th>Value (Area %)</th><th>Value (Pixel %)</th><th>Category</th></tr></thead><tbody>
@@ -24,8 +30,6 @@
     </tbody></table></div>
     <p style="color:var(--text-dim);font-size:.82rem;line-height:1.7;margin-top:.6rem">Tree cover remained fairly stable from 2021 to 2023, with a persistence rate of 82.59%. Most tree gains came from rangeland, while most tree losses also became rangeland, suggesting mainly vegetation degradation or recovery rather than strong urban conversion.</p>
   </div>
-
-  <!-- Built Area -->
   <div class="fade-up delay-2" style="margin-bottom:2rem">
     <h3 style="font-weight:700;color:var(--sage-dark);margin-bottom:.75rem">Built Area</h3>
     <div class="table-wrapper"><table class="data-table"><thead><tr><th>Indicator</th><th>Value (Area %)</th><th>Value (Pixel %)</th><th>Category</th></tr></thead><tbody>
@@ -39,8 +43,6 @@
     </tbody></table></div>
     <p style="color:var(--text-dim);font-size:.82rem;line-height:1.7;margin-top:.6rem">Built-up areas were the most stable class, with 93.46% persistence. New built-up areas mainly came from trees, rangeland, and crops, showing that urban expansion affected both natural and agricultural land.</p>
   </div>
-
-  <!-- Crops -->
   <div class="fade-up delay-3">
     <h3 style="font-weight:700;color:var(--sage-dark);margin-bottom:.75rem">Crops</h3>
     <div class="table-wrapper"><table class="data-table"><thead><tr><th>Indicator</th><th>Value (Area %)</th><th>Value (Pixel %)</th><th>Category</th></tr></thead><tbody>
@@ -56,11 +58,29 @@
   </div>
 </div></section>
 
-<div class="photo-divider" style="background-image:url('assets/photos/divider-2.webp')" onerror="this.style.display='none'"></div>
-
-<!-- Exposure Pies -->
+<!-- 5. Zonal Statistics -->
 <section class="section" style="padding-top:0;padding-bottom:3rem"><div class="container">
-  <div class="section-header fade-up"><h2>Population Exposure — 2023</h2><p class="subtitle">Proportion of Portuguese residents per EU concentration class</p></div>
+  <div class="section-header fade-up"><h2>5. Zonal Statistics</h2><p class="subtitle">This section presents the zonal statistics results, showing the mean, minimum, and maximum pollutant concentration changes for selected land cover change categories, including stable, gain, and loss areas.</p></div>
+  <div class="fade-up delay-1">
+    <div class="result-row"><a href="assets/XIANGXIE_NO2_CHANGE_PICTURE.png" target="_blank"><img src="assets/XIANGXIE_NO2_CHANGE_PICTURE.png" alt="PM2.5 Crops"></a><p>For Crops, PM₂.₅ shows negative mean values across stable, gain, and loss areas, indicating an overall decrease in concentration. The minimum values are strongly negative, while the maximum values remain slightly positive, suggesting local variation within each change category.</p></div>
+    <div class="result-row"><a href="assets/PENGYI_NO2_CHANGE_PICTURE.png" target="_blank"><img src="assets/PENGYI_NO2_CHANGE_PICTURE.png" alt="NO2 Built Area"></a><p>For Built Area, NO₂ shows small negative mean values but a wide range between minimum and maximum values. This indicates that although the average change is slightly decreasing, some built-up areas experienced local increases in NO₂ concentration.</p></div>
+    <div class="result-row"><a href="assets/LIYIRAN_PM10_CHANGE_PICTURE.png" target="_blank"><img src="assets/LIYIRAN_PM10_CHANGE_PICTURE.png" alt="PM10 Trees"></a><p>For Trees, PM₁₀ presents consistently negative mean values across stable, gain, and loss areas. This suggests a general decrease in PM₁₀ concentration in tree-related land cover zones, although maximum values show that some localized increases are still present.</p></div>
+  </div>
+</div></section>
+
+<!-- 6. Bivariate Exposure Analysis -->
+<section class="section" style="padding-top:0;padding-bottom:3rem"><div class="container">
+  <div class="section-header fade-up"><h2>6. Bivariate Exposure Analysis</h2><p class="subtitle">This section combines population density and pollutant concentration classes to identify administrative areas where higher population exposure overlaps with higher air pollution levels.</p></div>
+  <div class="charts-grid-3" style="margin-top:1rem">
+    <div class="chart-card fade-up"><h3 style="color:var(--text-muted)">NO₂ Bivariate Map</h3><p style="text-align:center;color:var(--text-muted);padding:2rem">Image coming soon</p></div>
+    <div class="chart-card fade-up delay-1"><h3 style="color:var(--text-muted)">PM₂.₅ Bivariate Map</h3><p style="text-align:center;color:var(--text-muted);padding:2rem">Image coming soon</p></div>
+    <div class="chart-card fade-up delay-2"><h3 style="color:var(--text-muted)">PM₁₀ Bivariate Map</h3><p style="text-align:center;color:var(--text-muted);padding:2rem">Image coming soon</p></div>
+  </div>
+</div></section>
+
+<!-- 7. Population Exposure -->
+<section class="section" style="padding-top:0;padding-bottom:3rem"><div class="container">
+  <div class="section-header fade-up"><h2>7. Population Exposure</h2><p class="subtitle">This section shows the proportion of Portuguese residents falling into each EU concentration class for NO₂, PM₂.₅, and PM₁₀ based on the 2023 annual average concentration maps and population data.</p></div>
   <div class="charts-grid-3">
     <div class="chart-card fade-up"><h3>PM₂.₅</h3><div class="chart-container"><canvas id="pm25-pie"></canvas></div></div>
     <div class="chart-card fade-up delay-1"><h3>NO₂</h3><div class="chart-container"><canvas id="no2-pie"></canvas></div></div>
@@ -68,36 +88,13 @@
   </div>
 </div></section>
 
-<!-- Zonal Stats -->
-<section class="section" style="padding-top:0;padding-bottom:3rem"><div class="container">
-  <div class="section-header fade-up"><h2>LC–Pollution Zonal Statistics</h2><p class="subtitle">AMAC mean/min/max (µg/m³) by land cover category</p></div>
-  <div class="table-wrapper fade-up delay-1"><table class="data-table"><thead><tr><th>Pollutant × LC</th><th>Category</th><th>Mean AMAC</th><th>Min</th><th>Max</th><th>Pixels</th></tr></thead><tbody>
-    <tr><td style="font-weight:600">PM₂.₅ × Crops</td><td>Gain</td><td style="color:var(--sage)">−1.87</td><td>−3.91</td><td>+0.50</td><td>37.6M</td></tr>
-    <tr><td style="font-weight:600">PM₂.₅ × Trees</td><td>Loss</td><td style="color:var(--sage)">−2.03</td><td>−3.91</td><td>+0.50</td><td>44.4M</td></tr>
-    <tr><td style="font-weight:600">NO₂ × Built Area</td><td>Gain</td><td style="color:var(--sage)">−0.16</td><td>−1.51</td><td>+2.66</td><td>8.3M</td></tr>
-    <tr><td style="font-weight:600">NO₂ × Built Area</td><td>Loss</td><td style="color:var(--sage)">−0.15</td><td>−1.51</td><td>+2.66</td><td>6.9M</td></tr>
-    <tr><td style="font-weight:600">PM₁₀ × Trees</td><td>Gain</td><td style="color:var(--sage)">−2.57</td><td>−6.17</td><td>+1.22</td><td>25.2M</td></tr>
-    <tr><td style="font-weight:600">PM₁₀ × Trees</td><td>Loss</td><td style="color:var(--sage)">−2.81</td><td>−6.17</td><td>+1.22</td><td>15.8M</td></tr>
-  </tbody></table></div>
-</div></section>
-
-<!-- Analysis Images -->
-<section class="section" style="padding-top:0;padding-bottom:3rem"><div class="container">
-  <div class="section-header fade-up"><h2>LC-Pollutant Cross Analysis Charts</h2><p class="subtitle">Group analysis charts from zonal statistics</p></div>
-  <div class="charts-grid-3">
-    <div class="chart-card fade-up"><h3>PM₂.₅ × Crops (XIANG XIE)</h3><a href="assets/XIANGXIE_NO2_CHANGE_PICTURE.png" target="_blank"><img src="assets/XIANGXIE_NO2_CHANGE_PICTURE.png" alt="PM2.5 Crops Analysis" style="width:100%;border-radius:12px;cursor:zoom-in;transition:transform 0.2s"></a></div>
-    <div class="chart-card fade-up delay-1"><h3>NO₂ × Built Area (PENGYI)</h3><a href="assets/PENGYI_NO2_CHANGE_PICTURE.png" target="_blank"><img src="assets/PENGYI_NO2_CHANGE_PICTURE.png" alt="NO2 Built Area Analysis" style="width:100%;border-radius:12px;cursor:zoom-in;transition:transform 0.2s"></a></div>
-    <div class="chart-card fade-up delay-2"><h3>PM₁₀ × Trees (YIRAN LI)</h3><a href="assets/LIYIRAN_PM10_CHANGE_PICTURE.png" target="_blank"><img src="assets/LIYIRAN_PM10_CHANGE_PICTURE.png" alt="PM10 Trees Analysis" style="width:100%;border-radius:12px;cursor:zoom-in;transition:transform 0.2s"></a></div>
-  </div>
-</div></section>
-
-<!-- Key Findings -->
+<!-- 8. Key Findings -->
 <section class="section" style="padding-top:0"><div class="container">
-  <div class="section-header fade-up"><h2>Key Findings</h2></div>
+  <div class="section-header fade-up"><h2>8. Key Findings</h2></div>
   <div class="data-grid" style="grid-template-columns:repeat(auto-fit,minmax(300px,1fr))">
-    <div class="card data-card fade-up delay-1"><h3>Air Quality Improved Across Portugal</h3><p>All three pollutants showed concentration decreases from 2021 to 2023. PM₁₀ experienced the largest decline (−2.83 µg/m³ in crop areas), followed by PM₂.₅ (−1.76 µg/m³ in tree areas) and NO₂ (−0.16 µg/m³ in built areas).</p></div>
-    <div class="card data-card fade-up delay-2"><h3>No Critical Population Exposure</h3><p>Zero Portuguese residents were exposed to hazardous-level pollution (Class 3+) in 2023. The population is roughly evenly split between Good and Moderate air quality across all pollutants.</p></div>
-    <div class="card data-card fade-up delay-3"><h3>Land Cover Largely Stable</h3><p>Built Area was most stable (99.54%), followed by Trees (97.84%). Crops showed the most dynamism at 88.62% stability, primarily exchanging with rangeland through gain (10.94%) and loss (6.89%).</p></div>
+    <div class="card data-card fade-up delay-1"><h3>Land Cover Stability and Main Transition Patterns</h3><p>The land cover change statistics show that Trees, Built Area, and Crops remained largely stable between 2021 and 2023, with persistence values of 82.59%, 93.46%, and 88.62% respectively. Built Area shows the highest stability, indicating limited urban land transformation, while Trees and Crops also remain mostly persistent. Most gains and losses are mainly linked to exchanges with rangeland, which is the dominant source of gain and destination of loss for both Trees and Crops. For Built Area, new urban areas mainly came from Trees, Rangeland, and Crops, while losses mainly transitioned back to Rangeland, Trees, and Crops. Overall, the results suggest that the study area experienced moderate land cover transitions but no major structural land cover change during the 2021–2023 period.</p></div>
+    <div class="card data-card fade-up delay-2"><h3>Population Exposure by Pollutant Class</h3><p>The exposure charts show that PM₂.₅ has the largest share of residents in the moderate class, with 88.1% of the population exposed to moderate PM₂.₅ levels. For NO₂, most residents are in the good class (55.3%), while PM₁₀ shows a more balanced pattern but still has a higher share in the moderate class (59.1%). Overall, PM₂.₅ appears to be the most critical pollutant in terms of population exposure in 2023.</p></div>
+    <div class="card data-card fade-up delay-3"><h3>Pollutant Change by Land Cover Category</h3><p>The zonal statistics indicate that most selected land cover categories experienced an overall decrease in pollutant concentration between 2021 and 2023, especially for PM₂.₅ in Crops and PM₁₀ in Trees. However, the presence of positive maximum values shows that improvements were not uniform across all areas, and some local zones still recorded pollutant increases.</p></div>
   </div>
 </div></section>
 
