@@ -16,6 +16,17 @@
 
 <div class="photo-divider" style="background-image:url('assets/photos/divider-2.webp')" onerror="this.style.display='none'"></div>
 
+<!-- AMAC Charts -->
+<section class="section" style="padding-top:3rem;padding-bottom:3rem"><div class="container">
+  <div class="section-header fade-up"><h2>Pollutant Change (AMAC) 2021→2023</h2><p class="subtitle">Annual Mean Aggregation Change by land cover transition category</p></div>
+  <div class="charts-grid-3">
+    <div class="chart-card fade-up"><h3>PM₂.₅ × Crops</h3><div class="chart-container"><canvas id="pm25-amac"></canvas></div></div>
+    <div class="chart-card fade-up delay-1"><h3>NO₂ × Built Area</h3><div class="chart-container"><canvas id="no2-amac"></canvas></div></div>
+    <div class="chart-card fade-up delay-2"><h3>PM₁₀ × Trees</h3><div class="chart-container"><canvas id="pm10-amac"></canvas></div></div>
+  </div>
+  <p style="color:var(--text-muted);font-size:.8rem;text-align:center;margin-top:1rem">Negative values indicate air quality improvement. All three pollutants showed net decreases 2021→2023 across all LC categories.</p>
+</div></section>
+
 <!-- Exposure Pies -->
 <section class="section" style="padding-top:0;padding-bottom:3rem"><div class="container">
   <div class="section-header fade-up"><h2>Population Exposure — 2023</h2><p class="subtitle">Proportion of Portuguese residents per EU concentration class</p></div>
@@ -49,19 +60,4 @@
   </div>
 </div></section>
 
-<!-- Key Findings -->
-<section class="section" style="padding-top:0"><div class="container">
-  <div class="section-header fade-up"><h2>Key Findings</h2></div>
-  <div class="data-grid" style="grid-template-columns:repeat(auto-fit,minmax(300px,1fr))">
-    <div class="card data-card fade-up delay-1"><h3>Air Quality Improved Across Portugal</h3><p>All three pollutants showed concentration decreases from 2021 to 2023. PM₁₀ experienced the largest decline (−2.83 µg/m³ in crop areas), followed by PM₂.₅ (−1.76 µg/m³ in tree areas) and NO₂ (−0.16 µg/m³ in built areas).</p></div>
-    <div class="card data-card fade-up delay-2"><h3>No Critical Population Exposure</h3><p>Zero Portuguese residents were exposed to hazardous-level pollution (Class 3+) in 2023. The population is roughly evenly split between Good and Moderate air quality across all pollutants.</p></div>
-    <div class="card data-card fade-up delay-3"><h3>Land Cover Largely Stable</h3><p>Built Area was most stable (99.54%), followed by Trees (97.84%). Crops showed the most dynamism at 88.62% stability, primarily exchanging with rangeland through gain (10.94%) and loss (6.89%).</p></div>
-  </div>
-</div></section>
-
-<footer class="footer">GIS Lab 2025/26 · Politecnico di Milano · YIRAN LI · PENGYI · XIANG XIE</footer>
-<script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.0/dist/chart.umd.min.js"></script>
-<script src="js/data.js"></script>
-<script src="js/charts.js"></script>
-</body>
-</html>
+<!-- 
