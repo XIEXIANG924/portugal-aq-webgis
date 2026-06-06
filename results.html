@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><title>Results · Portugal AQ</title><link rel="stylesheet" href="css/style.css"></head>
+<body>
+<nav class="navbar"><div class="nav-inner"><div class="nav-logo"><span class="logo-dot"></span>PT AQ Monitor</div><ul class="nav-links"><li><a href="index.html">Home</a></li><li><a href="methods.html">Methods</a></li><li><a href="results.html" class="active">Results</a></li><li><a href="webgis.html">WebGIS</a></li></ul></div></nav>
+
+<section class="section" style="padding-bottom:2rem"><div class="container"><div class="section-header fade-up"><h2>Results &amp; Analysis</h2><p class="subtitle">Land cover change, AMAC correlation, and population exposure assessment</p></div></div></section>
+
+<!-- LC Table -->
+<section class="section" style="padding-top:0;padding-bottom:3rem"><div class="container">
+  <div class="section-header fade-up"><h2>Land Cover Change 2021–2023</h2><p class="subtitle">Pixel-based change detection at 10m · Area % from EPSG:3035 <span class="badge">Bonus ✓</span></p></div>
+  <div class="table-wrapper fade-up delay-1"><table class="data-table" id="lcc-table"><thead><tr><th>Land Cover</th><th>Stable %</th><th>Gain %</th><th>Loss %</th><th>Gain (px)</th><th>Loss (px)</th><th>Net</th></tr></thead><tbody id="lcc-tbody"></tbody></table></div>
+  <p style="color:var(--text-muted);font-size:.8rem;margin-top:.75rem;text-align:center">Trees: 97.84% · Built Area: 99.54% · Crops: 88.62% stable. Crop areas showed the most dynamic transition, primarily exchanging with rangeland.</p>
+</div></section>
+
+<div class="photo-divider" style="background-image:url('assets/photos/divider-2.webp')" onerror="this.style.display='none'"></div>
+
+<!-- AMAC Charts -->
+<section class="section" style="padding-top:3rem;padding-bottom:3rem"><div class="container">
+  <div class="section-header fade-up"><h2>Pollutant Change (AMAC) 2021→2023</h2><p class="subtitle">Annual Mean Aggregation Change by land cover transition category</p></div>
+  <div class="charts-grid-3">
+    <div class="chart-card fade-up"><h3>PM₂.₅ × Trees</h3><div class="chart-container"><canvas id="pm25-amac"></canvas></div></div>
+    <div class="chart-card fade-up delay-1"><h3>NO₂ × Built Area</h3><div class="chart-container"><canvas id="no2-amac"></canvas></div></div>
+    <div class="chart-card fade-up delay-2"><h3>PM₁₀ × Crops</h3><div class="chart-container"><canvas id="pm10-amac"></canvas></div></div>
+  </div>
+  <p style="color:var(--text-muted);font-size:.8rem;text-align:center;margin-top:1rem">Negative values indicate air quality improvement. All three pollutants showed net decreases 2021→2023 across all LC categories.</p>
+</div></section>
+
+<!-- Exposure Pies -->
+<section class="section" style="padding-top:0;padding-bottom:3rem"><div class="container">
+  <div class="section-header fade-up"><h2>Population Exposure — 2023</h2><p class="subtitle">Proportion of Portuguese residents per EU concentration class</p></div>
+  <div class="charts-grid-3">
+    <div class="chart-card fade-up"><h3>PM₂.₅</h3><div class="chart-container"><canvas id="pm25-pie"></canvas></div></div>
+    <div class="chart-card fade-up delay-1"><h3>NO₂</h3><div class="chart-container"><canvas id="no2-pie"></canvas></div></div>
+    <div class="chart-card fade-up delay-2"><h3>PM₁₀</h3><div class="chart-container"><canvas id="pm10-pie"></canvas></div></div>
+  </div>
+</div></section>
+
+<!-- Zonal Stats -->
+<section class="section" style="padding-top:0;padding-bottom:3rem"><div class="container">
+  <div class="section-header fade-up"><h2>LC–Pollution Zonal Statistics</h2><p class="subtitle">AMAC mean/min/max (µg/m³) by land cover category</p></div>
+  <div class="table-wrapper fade-up delay-1"><table class="data-table"><thead><tr><th>Pollutant × LC</th><th>Category</th><th>Mean AMAC</th><th>Min</th><th>Max</th><th>Pixels</th></tr></thead><tbody>
+    <tr><td style="font-weight:600">PM₂.₅ × Trees</td><td>Gain</td><td style="color:var(--sage)">−1.87</td><td>−3.91</td><td>+0.50</td><td>37.6M</td></tr>
+    <tr><td style="font-weight:600">PM₂.₅ × Trees</td><td>Loss</td><td style="color:var(--sage)">−2.03</td><td>−3.91</td><td>+0.50</td><td>44.4M</td></tr>
+    <tr><td style="font-weight:600">NO₂ × Built Area</td><td>Gain</td><td style="color:var(--sage)">−0.16</td><td>−1.51</td><td>+2.66</td><td>8.3M</td></tr>
+    <tr><td style="font-weight:600">NO₂ × Built Area</td><td>Loss</td><td style="color:var(--sage)">−0.15</td><td>−1.51</td><td>+2.66</td><td>6.9M</td></tr>
+    <tr><td style="font-weight:600">PM₁₀ × Crops</td><td>Gain</td><td style="color:var(--sage)">−2.57</td><td>−6.17</td><td>+1.22</td><td>25.2M</td></tr>
+    <tr><td style="font-weight:600">PM₁₀ × Crops</td><td>Loss</td><td style="color:var(--sage)">−2.81</td><td>−6.17</td><td>+1.22</td><td>15.8M</td></tr>
+  </tbody></table></div>
+</div></section>
+
+<!-- Key Findings -->
+<section class="section" style="padding-top:0"><div class="container">
+  <div class="section-header fade-up"><h2>Key Findings</h2></div>
+  <div class="data-grid" style="grid-template-columns:repeat(auto-fit,minmax(300px,1fr))">
+    <div class="card data-card fade-up delay-1"><h3>Air Quality Improved Across Portugal</h3><p>All three pollutants showed concentration decreases from 2021 to 2023. PM₁₀ experienced the largest decline (−2.83 µg/m³ in crop areas), followed by PM₂.₅ (−1.76 µg/m³ in tree areas) and NO₂ (−0.16 µg/m³ in built areas).</p></div>
+    <div class="card data-card fade-up delay-2"><h3>No Critical Population Exposure</h3><p>Zero Portuguese residents were exposed to hazardous-level pollution (Class 3+) in 2023. The population is roughly evenly split between Good and Moderate air quality across all pollutants.</p></div>
+    <div class="card data-card fade-up delay-3"><h3>Land Cover Largely Stable</h3><p>Built Area was most stable (99.54%), followed by Trees (97.84%). Crops showed the most dynamism at 88.62% stability, primarily exchanging with rangeland through gain (10.94%) and loss (6.89%).</p></div>
+  </div>
+</div></section>
+
+<footer class="footer">GIS Lab 2025/26 · Politecnico di Milano · YIRAN LI · PENGYI · XIANG XIE</footer>
+<script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.0/dist/chart.umd.min.js"></script>
+<script src="js/data.js"></script>
+<script src="js/charts.js"></script>
+</body>
+</html>

@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><title>Methods · Portugal AQ</title><link rel="stylesheet" href="css/style.css"></head>
+<body>
+<nav class="navbar"><div class="nav-inner"><div class="nav-logo"><span class="logo-dot"></span>PT AQ Monitor</div><ul class="nav-links"><li><a href="index.html">Home</a></li><li><a href="methods.html" class="active">Methods</a></li><li><a href="results.html">Results</a></li><li><a href="webgis.html">WebGIS</a></li></ul></div></nav>
+
+<section class="section" style="padding-bottom:2rem"><div class="container"><div class="section-header fade-up"><h2>Methods &amp; Data</h2><p class="subtitle">Data sources, processing pipeline, and technical infrastructure</p></div></div></section>
+
+<section class="section" style="padding-top:0;padding-bottom:3rem"><div class="container">
+  <h3 style="font-weight:800;color:var(--sage-dark);margin-bottom:1.5rem;font-size:1.2rem">Data Sources</h3>
+  <div class="data-grid">
+    <div class="card data-card fade-up"><h3>CAMS Reanalysis</h3><p>Copernicus Atmosphere Monitoring Service. PM₂.₅, NO₂, PM₁₀ monthly aggregated raster data for 2021 and 2023. December 2023 computed from raw hourly NetCDF (744 bands) using GDAL band averaging. Resolution: 0.1°.</p></div>
+    <div class="card data-card fade-up delay-1"><h3>Copernicus Land Cover</h3><p>ESRI 10m Annual Land Cover (2017–2024) from ArcGIS Living Atlas. Classes extracted: Trees (2), Crops (5), Built Area (7). Binary mask differencing for 2021→2023 change detection.</p></div>
+    <div class="card data-card fade-up delay-2"><h3>WorldPop 2023</h3><p>Population Counts at 100m (R2025A v1) for Portugal. Resampled to 0.1° with Sum aggregation to preserve total population for exposure analysis.</p></div>
+    <div class="card data-card fade-up delay-3"><h3>GAUL Boundaries</h3><p>Portugal administrative boundary (EPSG:4326) from Global Administrative Unit Layers. Reprojected to EPSG:3035 for area-based Bonus calculations.</p></div>
+  </div>
+</div></section>
+
+<section class="section" style="padding-top:0;padding-bottom:3rem"><div class="container">
+  <h3 style="font-weight:800;color:var(--sage-dark);margin-bottom:1.5rem;font-size:1.2rem">Processing Pipeline</h3>
+  <div class="timeline">
+    <div class="timeline-item fade-up" data-step="1"><h4>Pollutant Maps — Dec 2023</h4><p>Raw hourly NetCDF (744 bands) processed with GDAL to compute monthly mean concentrations at 0.1°. Rasterized and clipped to Portugal.</p></div>
+    <div class="timeline-item fade-up delay-1" data-step="2"><h4>Annual Averages — 2023</h4><p>Twelve monthly rasters clipped and aggregated using r.series (average). Published as WMS.</p></div>
+    <div class="timeline-item fade-up delay-2" data-step="3"><h4>Concentration Classification</h4><p>Annual averages reclassified into 5 EU health guideline classes. Green (good) through purple (hazardous). Published as WMS with SLD styling.</p></div>
+    <div class="timeline-item fade-up delay-3" data-step="4"><h4>AMAC — Aggregation Change</h4><p>Raster Calculator: 2023 − 2021. Six-class discrete symbology with QML export. Core WebGIS layer.</p></div>
+    <div class="timeline-item fade-up delay-4" data-step="5"><h4>Land Cover Change</h4><p>Binary mask differencing at 10m → Gain/Loss/Stable maps. EPSG:3035 area statistics for Bonus evaluation.</p></div>
+    <div class="timeline-item fade-up delay-4" data-step="6"><h4>Zonal Statistics</h4><p>AMAC values extracted per LC change category at pixel level. Mean/min/max for each pollutant–land cover pair.</p></div>
+    <div class="timeline-item fade-up delay-4" data-step="7"><h4>Bivariate Analysis</h4><p>Population density (3 classes) × Pollution concentration (3 classes) → 3×3 bivariate classification per admin unit.</p></div>
+    <div class="timeline-item fade-up delay-4" data-step="8"><h4>Population Exposure</h4><p>Resampled population masked by concentration classes. Doughnut charts showing proportion per air quality level.</p></div>
+  </div>
+</div></section>
+
+<section class="section" style="padding-top:0;padding-bottom:2rem"><div class="container">
+  <h3 style="font-weight:800;color:var(--sage-dark);margin-bottom:1.5rem;font-size:1.2rem">Technology Stack</h3>
+  <div class="data-grid" style="grid-template-columns:repeat(auto-fit,minmax(190px,1fr))">
+    <div class="card data-card fade-up"><h3>QGIS 3.40 + GDAL</h3><p>Primary GIS processing: GRASS r.series, GDAL Warp, Raster Calculator, Reclassify by Table.</p></div>
+    <div class="card data-card fade-up delay-1"><h3>GeoServer (OGC WMS)</h3><p>Polimi Online GeoServer publishing 10 layers including AMAC, annual averages, and concentration maps.</p></div>
+    <div class="card data-card fade-up delay-2"><h3>OpenLayers 10</h3><p>Interactive WebGIS with dual basemaps, Scale Line, Full Screen, Mouse Position, and grouped layer switching.</p></div>
+    <div class="card data-card fade-up delay-3"><h3>Chart.js 4</h3><p>AMAC bar charts and population exposure doughnut charts. Responsive, dark-text-on-light design.</p></div>
+    <div class="card data-card fade-up delay-4"><h3>GitHub Pages</h3><p>Static site hosting. No backend required. All GIS layers served via GeoServer WMS.</p></div>
+  </div>
+</div></section>
+
+<footer class="footer">GIS Lab 2025/26 · Politecnico di Milano · YIRAN LI · PENGYI · XIANG XIE</footer>
+</body>
+</html>

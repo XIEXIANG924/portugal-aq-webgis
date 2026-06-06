@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Portugal Air Quality · GIS 2025/26</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+<nav class="navbar"><div class="nav-inner">
+  <div class="nav-logo"><span class="logo-dot"></span>PT AQ Monitor</div>
+  <ul class="nav-links">
+    <li><a href="index.html" class="active">Home</a></li>
+    <li><a href="methods.html">Methods</a></li>
+    <li><a href="results.html">Results</a></li>
+    <li><a href="webgis.html">WebGIS</a></li>
+  </ul>
+</div></nav>
+
+<section class="hero">
+  <div class="hero-bg"><img src="assets/photos/hero.webp" alt="" onerror="this.parentElement.style.display='none'"></div>
+  <div class="hero-overlay"></div>
+  <div class="container"><div class="hero-grid">
+    <div>
+      <span class="hero-badge fade-up">GIS LAB 2025/26 · POLITECNICO DI MILANO</span>
+      <h1 class="fade-up delay-1"><span class="accent">Mapping</span><br>Air Quality</h1>
+      <p class="hero-subtitle fade-up delay-2">Portugal · 2021–2023</p>
+      <p class="hero-desc fade-up delay-3">A spatial analysis of PM<sub>2.5</sub>, NO<sub>2</sub>, and PM<sub>10</sub> across Portugal — examining land cover transitions and their relationship with atmospheric quality. Powered by CAMS reanalysis, Copernicus Land Cover, and OGC-compliant WebGIS.</p>
+      <div class="hero-buttons fade-up delay-4">
+        <a href="results.html" class="btn btn-primary">Explore Results →</a>
+        <a href="webgis.html" class="btn btn-outline">Open WebGIS →</a>
+      </div>
+    </div>
+    <div></div>
+  </div></div>
+</section>
+
+<section class="section" style="padding-top:2rem"><div class="container"><div class="stats-row">
+  <div class="stat-card fade-up"><div class="stat-icon">📅</div><div class="stat-value">2021 → 2023</div><div class="stat-label">Study Period</div></div>
+  <div class="stat-card fade-up delay-1"><div class="stat-icon">🌿</div><div class="stat-value">NO₂ · PM₂.₅ · PM₁₀</div><div class="stat-label">Three Pollutants</div></div>
+  <div class="stat-card fade-up delay-2"><div class="stat-icon">📊</div><div class="stat-value">LCC · AMAC · Bivariate</div><div class="stat-label">Analysis Methods</div></div>
+  <div class="stat-card fade-up delay-3"><div class="stat-icon">🗺️</div><div class="stat-value">GeoServer · OGC WMS</div><div class="stat-label">WebGIS Stack</div></div>
+</div></div></section>
+
+<section class="section"><div class="container">
+  <div class="section-header fade-up"><h2>About This Project</h2><p class="subtitle">Understanding the spatial relationship between land transformation and atmospheric quality in Portugal</p></div>
+  <div class="data-grid" style="grid-template-columns:repeat(3,1fr)">
+    <div class="card data-card fade-up delay-1"><h3>Objective</h3><p>Quantify NO₂, PM₂.₅, and PM₁₀ concentration trends across Portugal (2021–2023) and correlate changes with land cover transitions using Copernicus data.</p></div>
+    <div class="card data-card fade-up delay-2"><h3>Approach</h3><p>Multi-temporal raster analysis with zonal statistics, bivariate classification of pollution vs. population exposure, and OGC-compliant interactive WebGIS.</p></div>
+    <div class="card data-card fade-up delay-3"><h3>Outcome</h3><p>Comprehensive air quality maps, land cover change detection, population exposure assessment, and a public-facing WebGIS on GeoServer + OpenLayers.</p></div>
+  </div>
+</div></section>
+
+<div class="photo-divider" style="background-image:url('assets/photos/divider-1.webp')" onerror="this.style.display='none'"></div>
+
+<footer class="footer">GIS Lab 2025/26 · Politecnico di Milano · YIRAN LI · PENGYI · XIANG XIE</footer>
+</body>
+</html>

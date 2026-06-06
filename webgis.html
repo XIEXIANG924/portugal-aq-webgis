@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><title>WebGIS · Portugal AQ</title><link rel="stylesheet" href="css/style.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/ol@v10.5.0/ol.css"></head>
+<body>
+<nav class="navbar"><div class="nav-inner"><div class="nav-logo"><span class="logo-dot"></span>PT AQ Monitor</div><ul class="nav-links"><li><a href="index.html">Home</a></li><li><a href="methods.html">Methods</a></li><li><a href="results.html">Results</a></li><li><a href="webgis.html" class="active">WebGIS</a></li></ul></div></nav>
+
+<div class="webgis-layout">
+  <aside class="map-sidebar">
+    <h3>Basemaps</h3>
+    <label><input type="radio" name="basemap" value="carto" checked> CartoDB Dark</label>
+    <label><input type="radio" name="basemap" value="osm"> OpenStreetMap</label>
+
+    <h3>NO₂</h3>
+    <label><input type="checkbox" data-layer="no2Amac" checked> AMAC Change 2021–2023</label>
+    <label><input type="checkbox" data-layer="no2Avg"> Annual Average 2023</label>
+    <label><input type="checkbox" data-layer="no2Conc"> Concentration Class (5 lv)</label>
+
+    <h3>PM₂.₅</h3>
+    <label><input type="checkbox" data-layer="pm25Amac" checked> AMAC Change 2021–2023</label>
+    <label><input type="checkbox" data-layer="pm25Avg"> Annual Average 2023</label>
+    <label><input type="checkbox" data-layer="pm25Conc"> Concentration Class (5 lv)</label>
+
+    <h3>PM₁₀</h3>
+    <label><input type="checkbox" data-layer="pm10Amac"> AMAC Change 2021–2023</label>
+    <label><input type="checkbox" data-layer="pm10Avg"> Annual Average 2023</label>
+    <label><input type="checkbox" data-layer="pm10Conc"> Concentration Class (5 lv)</label>
+
+    <h3>Reference</h3>
+    <label><input type="checkbox" data-layer="boundary" checked> Portugal Boundary</label>
+  </aside>
+
+  <div id="map"></div>
+
+  <div class="legend-panel" id="legend-panel">
+    <h3>Legend</h3><div id="legend-content"></div>
+  </div>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/ol@v10.5.0/dist/ol.js"></script>
+<script src="js/data.js"></script>
+<script src="js/map.js"></script>
+</body>
+</html>
