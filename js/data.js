@@ -36,7 +36,7 @@ const AMAC_DATA = {
 
 // LC Change Detection table (from group detection xlsx)
 const LCC_DATA = [
-  { class:'Trees (YIRAN LI)',       stable:71.52, gain:12.75, loss:15.73, gpx:38424196, lpx:47423414 },
-  { class:'Built Area (PENGYI)',    stable:88.32, gain:5.52,  loss:6.16,  gpx:6296831,  lpx:7027920 },
-  { class:'Crops (XIANG XIE)',      stable:75.12, gain:15.25, loss:9.64,  gpx:25713132, lpx:16248608 },
+  { class:'Trees',      stable:82.59, gain:8.67, loss:8.74, gpx:38424196, lpx:47423414, note:'Tree cover remained fairly stable, with 82.59% persistence. Most gains came from rangeland, while most losses also became rangeland, suggesting vegetation degradation/recovery rather than urban conversion.' },
+  { class:'Built Area', stable:93.46, gain:3.27, loss:3.27, gpx:6296831,  lpx:7027920,  note:'The most stable class at 93.46% persistence. New built-up areas mainly came from trees, rangeland, and crops, showing urban expansion affected both natural and agricultural land.' },
+  { class:'Crops',      stable:88.62, gain:5.68, loss:5.70, gpx:25713132, lpx:16248608, note:'High stability at 88.62%. Most crop gains came from rangeland, while most losses returned to rangeland, indicating strong exchange between agricultural land and open vegetation.' },
 ];

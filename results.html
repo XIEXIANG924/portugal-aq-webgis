@@ -10,8 +10,12 @@
 <section class="section" style="padding-top:0;padding-bottom:3rem"><div class="container">
   <div class="section-header fade-up"><h2>Land Cover Change 2021–2023</h2><p class="subtitle">Pixel-based change detection at 10m · Area % from EPSG:3035 <span class="badge">Bonus ✓</span></p></div>
   <div class="table-wrapper fade-up delay-1"><table class="data-table" id="lcc-table"><thead><tr><th>Land Cover</th><th>Stable %</th><th>Gain %</th><th>Loss %</th><th>Gain (px)</th><th>Loss (px)</th><th>Net</th></tr></thead><tbody id="lcc-tbody"></tbody></table></div>
-  <p style="color:var(--text-muted);font-size:.8rem;margin-top:.75rem;text-align:center">Trees: 71.52% · Built Area: 88.32% · Crops: 75.12% pixel-stable. Trees showed the most dynamic transition at 10m resolution.</p>
-  <p style="color:var(--text-muted);font-size:.8rem;margin-top:.5rem;text-align:center">Net = Gain% − Loss% · Positive = net increase, negative = net decrease · Data from binary mask differencing of ESRI 10m Land Cover (2023 − 2021)</p>
+  <div style="max-width:900px;margin:1.5rem auto 0">
+    <p style="color:var(--text-dim);font-size:.82rem;line-height:1.7;margin-bottom:.8rem"><strong style="color:var(--sage-dark)">Trees:</strong> Tree cover remained fairly stable, with 82.59% persistence. Most gains came from rangeland, while most losses also became rangeland, suggesting vegetation degradation or recovery rather than strong urban conversion.</p>
+    <p style="color:var(--text-dim);font-size:.82rem;line-height:1.7;margin-bottom:.8rem"><strong style="color:var(--sage-dark)">Built Area:</strong> The most stable class at 93.46% persistence. New built-up areas mainly came from trees, rangeland, and crops, showing urban expansion affected both natural and agricultural land.</p>
+    <p style="color:var(--text-dim);font-size:.82rem;line-height:1.7;margin-bottom:.8rem"><strong style="color:var(--sage-dark)">Crops:</strong> High stability at 88.62%. Most crop gains came from rangeland, while most losses returned to rangeland, indicating strong exchange between agricultural land and open vegetation.</p>
+    <p style="color:var(--text-muted);font-size:.75rem;margin-top:1rem;text-align:center">Persistence = Stable Area / (Stable + Loss) · Area % from EPSG:3035 · Data from ESRI 10m Land Cover binary mask differencing (2023 − 2021)</p>
+  </div>
 </div></section>
 
 <div class="photo-divider" style="background-image:url('assets/photos/divider-2.webp')" onerror="this.style.display='none'"></div>
