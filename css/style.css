@@ -18,14 +18,14 @@ body{background:var(--bg);color:var(--text);font-family:var(--font);line-height:
 body::before{content:'';position:fixed;inset:0;background:radial-gradient(ellipse at 70% 20%,rgba(139,180,142,0.12) 0%,transparent 60%),radial-gradient(ellipse at 30% 80%,rgba(196,154,74,0.06) 0%,transparent 50%);pointer-events:none;z-index:0}
 .container{max-width:1200px;margin:0 auto;padding:0 2.5rem;position:relative;z-index:1}
 /* Nav */
-.navbar{position:sticky;top:0;z-index:100;background:rgba(245,242,235,0.82);backdrop-filter:blur(24px) saturate(160%);-webkit-backdrop-filter:blur(24px);border-bottom:1px solid var(--border)}
+.navbar{position:sticky;top:0;z-index:100;background:rgba(61,90,60,0.88);backdrop-filter:blur(24px) saturate(160%);-webkit-backdrop-filter:blur(24px);border-bottom:1px solid rgba(255,255,255,0.08)}
 .nav-inner{max-width:1200px;margin:0 auto;display:flex;align-items:center;justify-content:space-between;height:56px;padding:0 2.5rem}
-.nav-logo{display:flex;align-items:center;gap:10px;font-size:14px;font-weight:600;color:var(--sage-dark);letter-spacing:-0.2px}
-.logo-dot{width:8px;height:8px;border-radius:50%;background:var(--sage);box-shadow:0 0 8px rgba(91,140,90,0.4)}
+.nav-logo{display:flex;align-items:center;gap:10px;font-size:14px;font-weight:600;color:#e8f0e8;letter-spacing:-0.2px}
+.logo-dot{width:8px;height:8px;border-radius:50%;background:var(--sage-light);box-shadow:0 0 8px rgba(141,180,142,0.6)}
 .nav-links{display:flex;list-style:none;gap:4px}
-.nav-links a{display:block;padding:8px 20px;color:var(--text-dim);text-decoration:none;font-size:14px;font-weight:500;border-radius:var(--radius-full);transition:var(--trans)}
-.nav-links a:hover{color:var(--sage-dark);background:rgba(91,140,90,0.06)}
-.nav-links a.active{color:var(--sage);background:rgba(91,140,90,0.08);font-weight:600}
+.nav-links a{display:block;padding:8px 20px;color:rgba(232,240,232,0.75);text-decoration:none;font-size:14px;font-weight:500;border-radius:var(--radius-full);transition:var(--trans)}
+.nav-links a:hover{color:#fff;background:rgba(255,255,255,0.1)}
+.nav-links a.active{color:#fff;background:rgba(255,255,255,0.15);font-weight:600}
 /* Sections */
 .section{padding:5rem 0}
 .section-header{text-align:center;margin-bottom:3.5rem}
