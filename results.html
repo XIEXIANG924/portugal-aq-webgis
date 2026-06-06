@@ -6,15 +6,53 @@
 
 <section class="section" style="padding-bottom:2rem"><div class="container"><div class="section-header fade-up"><h2>Results &amp; Analysis</h2><p class="subtitle">Land cover change, AMAC correlation, and population exposure assessment</p></div></div></section>
 
-<!-- LC Table -->
+<!-- LC Tables -->
 <section class="section" style="padding-top:0;padding-bottom:3rem"><div class="container">
-  <div class="section-header fade-up"><h2>Land Cover Change 2021–2023</h2><p class="subtitle">Pixel-based change detection at 10m · Area % from EPSG:3035 <span class="badge">Bonus ✓</span></p></div>
-  <div class="table-wrapper fade-up delay-1"><table class="data-table" id="lcc-table"><thead><tr><th>Land Cover</th><th>Stable %</th><th>Gain %</th><th>Loss %</th><th>Gain (px)</th><th>Loss (px)</th><th>Net</th></tr></thead><tbody id="lcc-tbody"></tbody></table></div>
-  <div style="max-width:900px;margin:1.5rem auto 0">
-    <p style="color:var(--text-dim);font-size:.82rem;line-height:1.7;margin-bottom:.8rem"><strong style="color:var(--sage-dark)">Trees:</strong> Tree cover remained fairly stable, with 82.59% persistence. Most gains came from rangeland, while most losses also became rangeland, suggesting vegetation degradation or recovery rather than strong urban conversion.</p>
-    <p style="color:var(--text-dim);font-size:.82rem;line-height:1.7;margin-bottom:.8rem"><strong style="color:var(--sage-dark)">Built Area:</strong> The most stable class at 93.46% persistence. New built-up areas mainly came from trees, rangeland, and crops, showing urban expansion affected both natural and agricultural land.</p>
-    <p style="color:var(--text-dim);font-size:.82rem;line-height:1.7;margin-bottom:.8rem"><strong style="color:var(--sage-dark)">Crops:</strong> High stability at 88.62%. Most crop gains came from rangeland, while most losses returned to rangeland, indicating strong exchange between agricultural land and open vegetation.</p>
-    <p style="color:var(--text-muted);font-size:.75rem;margin-top:1rem;text-align:center">Persistence = Stable Area / (Stable + Loss) · Area % from EPSG:3035 · Data from ESRI 10m Land Cover binary mask differencing (2023 − 2021)</p>
+  <div class="section-header fade-up"><h2>Land Cover Change 2021–2023</h2><p class="subtitle">Persistence, gain sources, and loss destinations · Area % from EPSG:3035 <span class="badge">Bonus ✓</span></p></div>
+
+  <!-- Trees -->
+  <div class="fade-up delay-1" style="margin-bottom:2rem">
+    <h3 style="font-weight:700;color:var(--sage-dark);margin-bottom:.75rem">Trees</h3>
+    <div class="table-wrapper"><table class="data-table"><thead><tr><th>Indicator</th><th>Value (Area %)</th><th>Value (Pixel %)</th><th>Category</th></tr></thead><tbody>
+      <tr><td style="font-weight:600">Stability (Persistence)</td><td>82.59%</td><td>82.62%</td><td>—</td></tr>
+      <tr><td>Primary Source of Gain</td><td>88.76%</td><td>88.67%</td><td>Rangeland (11)</td></tr>
+      <tr><td>Secondary Source of Gain</td><td>5.47%</td><td>5.52%</td><td>Crops (5)</td></tr>
+      <tr><td>Tertiary Source of Gain</td><td>5.37%</td><td>5.42%</td><td>Built Area (7)</td></tr>
+      <tr><td>Primary Destination of Loss</td><td>84.77%</td><td>84.65%</td><td>Rangeland (11)</td></tr>
+      <tr><td>Secondary Destination of Loss</td><td>8.00%</td><td>8.08%</td><td>Crops (5)</td></tr>
+      <tr><td>Tertiary Destination of Loss</td><td>7.03%</td><td>6.99%</td><td>Built Area (7)</td></tr>
+    </tbody></table></div>
+    <p style="color:var(--text-dim);font-size:.82rem;line-height:1.7;margin-top:.6rem">Tree cover remained fairly stable, with 82.59% persistence. Most gains came from rangeland, while most losses also became rangeland, suggesting vegetation degradation or recovery rather than strong urban conversion.</p>
+  </div>
+
+  <!-- Built Area -->
+  <div class="fade-up delay-2" style="margin-bottom:2rem">
+    <h3 style="font-weight:700;color:var(--sage-dark);margin-bottom:.75rem">Built Area</h3>
+    <div class="table-wrapper"><table class="data-table"><thead><tr><th>Indicator</th><th>Value (Area %)</th><th>Value (Pixel %)</th><th>Category</th></tr></thead><tbody>
+      <tr><td style="font-weight:600">Stability (Persistence)</td><td>93.46%</td><td>93.48%</td><td>—</td></tr>
+      <tr><td>Primary Source of Gain</td><td>37.48%</td><td>37.70%</td><td>Trees (2)</td></tr>
+      <tr><td>Secondary Source of Gain</td><td>35.24%</td><td>35.07%</td><td>Rangeland (11)</td></tr>
+      <tr><td>Tertiary Source of Gain</td><td>25.78%</td><td>25.73%</td><td>Crops (5)</td></tr>
+      <tr><td>Primary Destination of Loss</td><td>44.67%</td><td>44.52%</td><td>Rangeland (11)</td></tr>
+      <tr><td>Secondary Destination of Loss</td><td>29.43%</td><td>29.63%</td><td>Trees (2)</td></tr>
+      <tr><td>Tertiary Destination of Loss</td><td>24.33%</td><td>24.29%</td><td>Crops (5)</td></tr>
+    </tbody></table></div>
+    <p style="color:var(--text-dim);font-size:.82rem;line-height:1.7;margin-top:.6rem">The most stable class at 93.46% persistence. New built-up areas mainly came from trees, rangeland, and crops, showing urban expansion affected both natural and agricultural land.</p>
+  </div>
+
+  <!-- Crops -->
+  <div class="fade-up delay-3">
+    <h3 style="font-weight:700;color:var(--sage-dark);margin-bottom:.75rem">Crops</h3>
+    <div class="table-wrapper"><table class="data-table"><thead><tr><th>Indicator</th><th>Value (Area %)</th><th>Value (Pixel %)</th><th>Category</th></tr></thead><tbody>
+      <tr><td style="font-weight:600">Stability (Persistence)</td><td>88.62%</td><td>88.60%</td><td>—</td></tr>
+      <tr><td>Primary Source of Gain</td><td>78.83%</td><td>78.53%</td><td>Rangeland (11)</td></tr>
+      <tr><td>Secondary Source of Gain</td><td>13.98%</td><td>14.25%</td><td>Trees (2)</td></tr>
+      <tr><td>Tertiary Source of Gain</td><td>6.60%</td><td>6.64%</td><td>Built Area (7)</td></tr>
+      <tr><td>Primary Destination of Loss</td><td>73.18%</td><td>73.03%</td><td>Rangeland (11)</td></tr>
+      <tr><td>Secondary Destination of Loss</td><td>13.33%</td><td>13.37%</td><td>Built Area (7)</td></tr>
+      <tr><td>Tertiary Destination of Loss</td><td>12.90%</td><td>13.01%</td><td>Trees (2)</td></tr>
+    </tbody></table></div>
+    <p style="color:var(--text-dim);font-size:.82rem;line-height:1.7;margin-top:.6rem">High stability at 88.62%. Most crop gains came from rangeland, while most losses returned to rangeland, indicating strong exchange between agricultural land and open vegetation.</p>
   </div>
 </div></section>
 
