@@ -102,7 +102,7 @@ body::before{content:'';position:fixed;inset:0;background:radial-gradient(ellips
 .ol-control button:hover{background:var(--sage)!important;color:#fff!important}
 .ol-scale-line{background:var(--bg-card)!important;border:1px solid var(--border)!important;border-radius:var(--radius-sm)!important;padding:4px 10px!important;box-shadow:var(--shadow-sm)!important}
 .ol-scale-line-inner{color:var(--sage-dark)!important;border-color:var(--sage-light)!important;font-size:11px!important;font-weight:600}
-.mouse-position{background:var(--bg-card)!important;color:var(--sage-dark)!important;padding:5px 12px!important;border-radius:var(--radius-sm)!important;font-size:12px!important;border:1px solid var(--border)!important;box-shadow:var(--shadow-sm)!important;font-weight:500}
+.mouse-position{background:var(--bg-card)!important;color:var(--sage-dark)!important;padding:5px 12px!important;border-radius:var(--radius-sm)!important;font-size:12px!important;border:1px solid var(--border)!important;box-shadow:var(--shadow-sm)!important;font-weight:500;text-align:center!important}
 .ol-attribution{background:var(--bg-card)!important;border-radius:var(--radius-sm)!important;font-size:10px!important}
 .ol-popup{position:absolute;background:var(--bg-card);border:1.5px solid var(--sage);border-radius:var(--radius);padding:12px 16px;color:var(--text);font-size:.8rem;max-width:280px;box-shadow:var(--shadow-lg)}
 /* Photos section divider */

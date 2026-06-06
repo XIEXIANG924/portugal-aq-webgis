@@ -5,7 +5,7 @@ const center = ol.proj.fromLonLat([-8.0,39.5]);
 
 // Basemaps
 const osmBase = new ol.layer.Tile({title:'OpenStreetMap',type:'base',visible:true,source:new ol.source.OSM({attributions:'© OSM contributors'})});
-const cartoBase = new ol.layer.Tile({title:'CartoDB Dark',type:'base',visible:false,source:new ol.source.XYZ({url:'https://{a-d}.basemaps.cartocdn.com/dark_all/{z}/{x}/{y}{r}.png',attributions:'© OSM © CARTO',maxZoom:19})});
+const cartoBase = new ol.layer.Tile({title:'CartoDB Light',type:'base',visible:false,source:new ol.source.XYZ({url:'https://{a-d}.basemaps.cartocdn.com/light_all/{z}/{x}/{y}{r}.png',attributions:'© OSM © CARTO',maxZoom:19})});
 
 // WMS factory
 function wms(title, layer, visible, opacity){
